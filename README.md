@@ -21,7 +21,7 @@ docker run -p 8080:80 usiu-first-year:v1
 - No persistence layer; Student Affairs analytics would require hooking these inputs into a backend or spreadsheet workflow.
 
 ## Design Assets
-Wireframes (`design/*.pdf`) and rationale (`design/notes.md`) illustrate the intended interactions for greeting, estimator flow, and summary states.
+Wireframes (`design/*.estimator_js.PNG, summary_js.PNG, welcome_js.PNG`) and rationale (`design/notes.md`) illustrate the intended interactions for greeting, estimator flow, and summary states.
 
 ## Testing Checklist (Manual)
 - Page loads with no console errors and shows the personalised greeting.
