@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>USIU First-Year Companion (v1)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <p class="badge">Student Affairs ? Orientation Week</p>
+    <h1>USIU First-Year Companion</h1>
+    <p class="tagline">Plan your week, stretch your shillings, and feel at home faster.</p>
+  </header>
+  <main>
+    <section class="hero" aria-live="polite">
+      <h2 id="greeting">Hello, future Maverick! ??</h2>
+      <p>Welcome to your quick orientation helper. Start with a personalised estimate and explore the campus-ready theme.</p>
+      <div class="actions">
+        <button id="run" type="button">Run Estimator</button>
+        <button id="theme" type="button">Toggle Theme</button>
+        <button id="reset" type="button">Reset Summary</button>
+      </div>
+    </section>
+
+    <section class="tips">
+      <h3>What this companion covers</h3>
+      <ul>
+        <li>Quick greeting personalised with your name.</li>
+        <li>Weekly transport + snack budget estimator.</li>
+        <li>10% savings tip you can try this week.</li>
+        <li>Day/Night theme to match your study vibe.</li>
+      </ul>
+    </section>
+
+    <section class="summary">
+      <h3>Weekly Summary</h3>
+      <pre id="summary">Run the estimator to see your weekly plan?</pre>
+      <p class="hint">Need to tweak numbers? Tap ?Run Estimator? again?everything logs to the console for easy debugging.</p>
+    </section>
+  </main>
+  <footer>
+    <small>? USIU Student Affairs ? Demo v1</small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("run").addEventListener("click", runEstimator);
+    document.getElementById("theme").addEventListener("click", toggleTheme);
+    document.getElementById("reset").addEventListener("click", resetSummary);
+  </script>
+</body>
+</html>

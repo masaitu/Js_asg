@@ -1,0 +1,4 @@
+design/
+.git
+.DS_Store
+README.md

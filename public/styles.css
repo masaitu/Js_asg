@@ -1,0 +1,143 @@
+:root {
+  --accent-day: #3a86ff;
+  --accent-night: #ffb703;
+  --surface: #ffffff;
+  --surface-muted: #f5f7fb;
+  --summary-surface: #0b1728;
+  --summary-text: #fdfcff;
+  --text: #111827;
+  --text-muted: #4b5563;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 1.5rem 1.25rem 3rem;
+  background: var(--surface);
+  color: var(--text);
+  font: 16px/1.6 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header,
+footer {
+  border-top: 4px solid var(--accent-day);
+  padding: 0.75rem 0;
+}
+
+header h1 {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 1.875rem;
+}
+
+header .badge {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-day);
+  margin: 0;
+}
+
+header .tagline {
+  margin: 0.2rem 0 0.5rem;
+  color: var(--text-muted);
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero {
+  background: var(--surface-muted);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 18px rgba(58, 134, 255, 0.08);
+}
+
+.hero h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--accent-day);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover,
+button:focus-visible {
+  transform: translateY(-2px);
+  outline: none;
+}
+
+button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.35);
+}
+
+.tips,
+.summary {
+  background: var(--surface-muted);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.tips ul {
+  padding-left: 1.25rem;
+  margin: 0.75rem 0 0;
+}
+
+.summary pre {
+  background: var(--summary-surface);
+  color: var(--summary-text);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0.75rem 0;
+}
+
+.summary .hint {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 2.5rem 3rem 4rem;
+  }
+
+  main {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+
+  .summary {
+    grid-column: 1 / span 2;
+  }
+}
